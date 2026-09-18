@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Scientific congresses and specialist meetings in cardiovascular medicine, 2026 and 2027.">
+<title>Events &middot; PrecisionCardio</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<style>
+:root{--ivory:#F4F1EA;--ivory2:#EAE6DB;--mineral:#DCE2F1;--ink:#16181C;--midnight:#16213F;--cobalt:#2A3D8F;--orange:#C1521E;
+  --mut:#4A4F57;--dim:#8A8E95;--rule:#D3CEC2;--hair:rgba(22,33,63,.2);
+  --fD:'Libre Franklin',system-ui,sans-serif;--fM:'IBM Plex Mono',ui-monospace,monospace;
+  --pgMax:1320px;--pgGut:clamp(22px,4vw,58px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--fD);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,p{margin:0;padding:0}
+.wrap{width:100%;max-width:var(--pgMax);margin:0 auto;padding-left:var(--pgGut);padding-right:var(--pgGut)}
+
+/* masthead, unchanged from the site */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding:22px 0 18px;border-bottom:1.5px solid var(--ink)}
+.lock b{display:block;font-weight:800;font-size:22px;letter-spacing:-.04em}
+.lock i{display:block;font-family:var(--fM);font-style:normal;font-weight:500;font-size:7.6px;letter-spacing:.15em;text-transform:uppercase;color:var(--cobalt);margin-top:6px;line-height:1.5}
+.lock a{text-decoration:none}
+.nav{display:flex;align-items:center;gap:26px;padding-top:5px}
+.nav a{font-family:var(--fM);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;color:var(--mut)}
+.nav a.on{color:var(--ink);border-bottom:1.5px solid var(--cobalt);padding-bottom:3px}
+.nav .btn{background:var(--cobalt);color:var(--ivory);font-weight:700;font-size:10px;padding:11px 16px}
+.nav .btn:hover{background:var(--midnight)}
+.gol{display:none}
+
+
+/* ---------- events calendar, matched to FAQ ---------- */
+[hidden]{display:none!important}
+.head{padding:clamp(40px,5.5vh,64px) 0 clamp(22px,2.8vh,30px)}
+.kicker{font-family:var(--fM);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt)}
+h1{margin-top:14px;font-weight:800;font-size:clamp(30px,3.4vw,46px);line-height:1.02;letter-spacing:-.04em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--cobalt)}
+.intro{margin-top:16px;max-width:66ch;font-size:clamp(16px,1.2vw,17.5px);line-height:1.6;color:var(--mut)}
+.jump{margin-top:22px;display:flex;gap:10px 26px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--rule)}
+.jump button{font-family:var(--fM);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);background:none;border:0;border-bottom:1px solid transparent;padding:0 0 3px;cursor:pointer}
+.jump button:hover,.jump button:focus-visible{color:var(--ink);outline:none;border-bottom-color:var(--cobalt)}
+.jump button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--cobalt)}
+
+.sheet{padding-bottom:clamp(40px,5vh,60px)}
+.grp{padding-top:clamp(34px,4.4vh,50px)}
+.grp>.lab{display:block;font-family:var(--fM);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cobalt);padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.evs{list-style:none;margin:0;padding:0}
+.ev{display:grid;grid-template-columns:170px minmax(0,1fr) 220px;gap:6px 32px;padding:18px 0 20px;border-bottom:1px solid var(--rule)}
+.when{font-family:var(--fM);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--ink);padding-top:3px;font-variant-numeric:tabular-nums}
+.type{font-family:var(--fM);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+.ev[data-type="major"] .type{color:var(--cobalt)}
+.ev h2{margin-top:6px;font-weight:600;font-size:clamp(16.5px,1.35vw,19px);letter-spacing:-.02em;line-height:1.3}
+.ev h2 a{text-decoration:none}
+.ev h2 a:hover,.ev h2 a:focus-visible{color:var(--cobalt);outline:none;text-decoration:underline;text-underline-offset:3px}
+.desc{margin-top:6px;max-width:72ch;font-size:clamp(15.5px,1.1vw,16.5px);line-height:1.6;color:var(--mut)}
+.flag{display:inline-block;margin-top:10px;font-family:var(--fM);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.where{font-size:15px;line-height:1.5;color:var(--mut);padding-top:2px;text-align:right}
+.none{padding-top:30px;color:var(--mut)}
+.note{margin-top:34px;padding-top:20px;border-top:1px solid var(--ink);font-size:14px;line-height:1.6;color:var(--mut);max-width:80ch}
+
+@media (max-width:760px){
+  .mast{align-items:center;gap:16px}
+  .lock i{display:none}.lock b{font-size:20px}
+  .nav .btn{background:transparent;color:var(--cobalt);box-shadow:inset 0 0 0 1.5px var(--cobalt);padding:9px 14px;font-size:11px}
+  .god{display:none}.gol{display:inline}
+  .head{padding:30px 0 18px}
+  h1{font-size:clamp(27px,7.4vw,34px)}
+  .grp{padding-top:28px}
+  .ev{grid-template-columns:1fr;gap:4px;padding:16px 0}
+  .where{text-align:left;order:3}
+  .when{order:1}
+  .what{order:2}
+  footer .flegal{font-size:13px;line-height:1.55}
+  footer .frow{font-size:12px;letter-spacing:.08em;line-height:2.2}
+  footer .frow a{display:inline-block;margin:0 14px 0 0}
+}
+
+/* ---------- phone corrections ---------- */
+/* the lockup has to be a reliable tap target back to the homepage */
+.lock a{display:inline-block;padding:2px 0}
+.tabs{display:contents}
+/* the legal sentence is a sentence, not a label: never all caps at 11px */
+.status{font-family:var(--fD);font-size:14px;letter-spacing:0;text-transform:none;line-height:1.6;color:var(--mut)}
+@media (max-width:760px){
+  /* the three tabs move to their own row instead of disappearing */
+  .mast{display:grid;grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"lock btn" "tabs tabs";align-items:center;row-gap:14px;padding-bottom:0}
+  .lock{grid-area:lock}
+  .nav{display:contents}
+  .nav .btn{grid-area:btn}
+  .tabs{grid-area:tabs;display:flex;width:100%;border-top:1px solid var(--rule)}
+  .tabs a{flex:1;text-align:center;padding:14px 4px 12px;font-size:12px;letter-spacing:.1em;
+    border-bottom:2px solid transparent;display:block}
+  .tabs a.on{color:var(--ink);border-bottom-color:var(--cobalt)}
+  .kicker,.lab,.field i,.jump a{font-size:12px}
+  .status{font-size:14px}
+}
+@media (max-width:760px){
+  .grp>.lab{font-size:12px}
+  .jump a{padding:8px 0}
+}
+@media (max-width:760px){.nav .btn,.nav .btn span{font-size:12px}}
+
+@media (max-width:760px){
+  .grp>.lab{font-size:12px}
+  .jump button{font-size:12px;padding:8px 0}
+  .type,.flag{font-size:11.5px}
+}
+@media (max-width:760px){.nav .btn,.nav .btn span{font-size:12px}}
+</style>
+</head>
+<body>
+<header class="wrap"><div class="mast"><div class="lock"><a href="/"><b>PrecisionCardio<span style="font-size:0.55em; position:relative; top:-0.35em; line-height:0;">&trade;</span></b><i>Industry alliance for<br>precision cardiovascular medicine</i></a></div><nav class="nav"><span class="tabs"><a href="/about">About</a><a href="/membership">Membership</a><a href="/faq">FAQ</a></span><a class="btn" href="https://forms.precisioncardio.org/membership" target="_blank" rel="noopener"><span class="god">Request a membership conversation</span><span class="gol">Membership</span></a></nav></div></header>
+
+<div class="wrap">
+  <div class="head">
+    <p class="kicker">Events</p>
+    <h1>Cardiovascular meetings, <em>2026 and 2027.</em></h1>
+    <p class="intro">Scientific congresses and specialist meetings across cardiovascular medicine, listed by date. Dates are taken from each organizer's website. Please check there before making plans.</p>
+    <nav class="jump" aria-label="Filter by type">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All meetings</button>
+      <button type="button" id="f-major" data-f="major" aria-pressed="false">Major congresses</button>
+      <button type="button" id="f-spec" data-f="spec" aria-pressed="false">Specialist meetings</button>
+      <button type="button" id="f-rel" data-f="rel" aria-pressed="false">Related meetings</button>
+    </nav>
+  </div>
+
+  <div class="sheet">
+    <section class="grp mon">
+      <span class="lab">September 2026</span>
+      <ul class="evs">
+        <li class="ev" data-type="spec">
+          <p class="when">30 Sep 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://amyloidosisforum.org/2026-meeting/" target="_blank" rel="noopener">Amyloidosis Forum</a></h2><p class="desc">An annual meeting of clinicians, researchers, regulators, patients and industry working on drug development questions in AL and ATTR amyloidosis.</p></div>
+          <p class="where">White Oak, MD, and online</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">October 2026</span>
+      <ul class="evs">
+        <li class="ev" data-type="spec">
+          <p class="when">2&ndash;3 Oct 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://familyheart.org/family-heart-global-summit" target="_blank" rel="noopener">Family Heart Global Summit</a></h2><p class="desc">Patients, clinicians, researchers and industry focused on inherited lipid disorders, including familial hypercholesterolemia and high lipoprotein(a).</p></div>
+          <p class="where">San Diego, CA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">2 Oct 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.hfcollaboratory.com/meetings/" target="_blank" rel="noopener">Heart Failure Collaboratory Fall Think Tank</a></h2><p class="desc">A half-day virtual session of a heart failure forum that brings together clinicians, investigators, regulators, industry, payers and patients.</p></div>
+          <p class="where">Online</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">9&ndash;12 Oct 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://hfsa.org/asm/hfsa-annual-scientific-meeting-2026" target="_blank" rel="noopener">HFSA Annual Scientific Meeting</a></h2><p class="desc">The annual heart failure meeting, with substantial programming on cardiomyopathies and cardiac amyloidosis.</p></div>
+          <p class="where">Phoenix, AZ</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">15&ndash;17 Oct 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.cardiometabolichealth.org/21st-annual-cardiometabolic-health-congress/" target="_blank" rel="noopener">Cardiometabolic Health Congress</a></h2><p class="desc">A practice-focused congress on cardiometabolic health across cardiology, endocrinology and nephrology.</p></div>
+          <p class="where">Boston, MA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">20&ndash;24 Oct 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.ashg.org/meetings/future-past/" target="_blank" rel="noopener">ASHG Annual Meeting</a></h2><p class="desc">The largest annual meeting in human genetics research.</p></div>
+          <p class="where">Montreal, Canada</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">22&ndash;25 Oct 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://www.hcmsummit.org/" target="_blank" rel="noopener">International HCM Summit</a></h2><p class="desc">A clinical meeting on hypertrophic cardiomyopathy covering diagnosis, genetics, imaging and management.</p></div>
+          <p class="where">Boston, MA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">25&ndash;27 Oct 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://rarediseases.org/event/2026-nord-rare-diseases-orphan-products-breakthrough-summit/" target="_blank" rel="noopener">NORD Breakthrough Summit</a></h2><p class="desc">A rare disease meeting covering diagnosis, drug development, research, patient engagement and policy.</p></div>
+          <p class="where">Washington, DC</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">November 2026</span>
+      <ul class="evs">
+        <li class="ev" data-type="major">
+          <p class="when">6&ndash;9 Nov 2026</p>
+          <div class="what"><p class="type">Major congress</p><h2><a href="https://professional.heart.org/en/meetings/scientific-sessions" target="_blank" rel="noopener">AHA Scientific Sessions 2026</a></h2><p class="desc">The American Heart Association's annual meeting, covering cardiovascular science and clinical practice over four days.</p></div>
+          <p class="where">Chicago, IL</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">6 Nov 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://hcmsociety.org/" target="_blank" rel="noopener">HCMS Scientific Sessions</a></h2><p class="desc">A day of hypertrophic cardiomyopathy sessions held on the opening day of AHA Scientific Sessions.</p></div>
+          <p class="where">Chicago, IL</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">10&ndash;14 Nov 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.nsgc.org/conference" target="_blank" rel="noopener">NSGC Annual Conference</a></h2><p class="desc">The annual conference for genetic counselors, covering practice across specialties.</p></div>
+          <p class="where">Baltimore, MD</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">12&ndash;13 Nov 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.escardio.org/events/congresses/digital-ai-summit/" target="_blank" rel="noopener">ESC Digital &amp; AI Summit</a></h2><p class="desc">A meeting on digital health and artificial intelligence in cardiovascular care.</p></div>
+          <p class="where">Basel, Switzerland</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">15&ndash;18 Nov 2026</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.isaamyloidosis.org/event/xx-international-symposium-on-amyloidosis-isa-2026/" target="_blank" rel="noopener">International Symposium on Amyloidosis</a></h2><p class="desc">The main scientific meeting on all forms of amyloidosis, held every two years.</p></div>
+          <p class="where">Montevideo, Uruguay</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">December 2026</span>
+      <ul class="evs">
+        <li class="ev" data-type="spec">
+          <p class="when">7&ndash;9 Dec 2026</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://www.globalcvctforum.com/" target="_blank" rel="noopener">Global CVCT Forum</a></h2><p class="desc">Trialists, regulators, industry and patients discuss individual cardiovascular, cardiorenal and cardiometabolic trials in depth. The forum has no exhibits.</p></div>
+          <p class="where">Washington, DC</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">January 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="rel">
+          <p class="when">11&ndash;14 Jan 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.jpmorgan.com/about-us/events-conferences/health-care-conference" target="_blank" rel="noopener">J.P. Morgan Healthcare Conference</a></h2><p class="desc">The largest annual healthcare investment conference.</p><span class="flag">By invitation only</span></div>
+          <p class="where">San Francisco, CA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">27&ndash;29 Jan 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://pmwcintl.com/" target="_blank" rel="noopener">Precision Medicine World Conference</a></h2><p class="desc">A broad precision medicine conference spanning research, clinical practice and industry.</p></div>
+          <p class="where">Santa Clara, CA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">31 Jan&ndash;4 Feb 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://worldsymposia.org/" target="_blank" rel="noopener">WORLDSymposium</a></h2><p class="desc">The annual research meeting on lysosomal diseases, including Fabry disease, which can affect the heart.</p></div>
+          <p class="where">San Diego, CA</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">February 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="spec">
+          <p class="when">17&ndash;20 Feb 2027</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://scmr.org/event-calendar/" target="_blank" rel="noopener">SCMR Scientific Sessions</a></h2><p class="desc">The annual meeting for cardiovascular magnetic resonance research and practice.</p></div>
+          <p class="where">Rome, Italy</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">March 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="rel">
+          <p class="when">16&ndash;18 Mar 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.diaglobal.org/en/flagship/dia-europe-2027/about/conference" target="_blank" rel="noopener">DIA Europe</a></h2><p class="desc">A regulatory science meeting for regulators, health technology assessment bodies, patient organizations and industry.</p></div>
+          <p class="where">Basel, Switzerland</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">April 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="major">
+          <p class="when">10&ndash;12 Apr 2027</p>
+          <div class="what"><p class="type">Major congress</p><h2><a href="https://accscientificsession.acc.org/" target="_blank" rel="noopener">ACC.27 with WCC</a></h2><p class="desc">The American College of Cardiology's annual scientific session, held in 2027 together with the World Congress of Cardiology.</p></div>
+          <p class="where">Houston, TX</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">11&ndash;13 Apr 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.escardio.org/events/congresses/ehra-congress/" target="_blank" rel="noopener">EHRA 2027</a></h2><p class="desc">The European congress on arrhythmias and cardiac electrophysiology.</p></div>
+          <p class="where">Helsinki, Finland, and online</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">13&ndash;17 Apr 2027</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://www.acmgmeeting.net/" target="_blank" rel="noopener">ACMG Annual Clinical Genetics Meeting</a></h2><p class="desc">The annual clinical genetics meeting, covering diagnosis and care across inherited conditions, including cardiovascular disease.</p></div>
+          <p class="where">Minneapolis, MN</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">15&ndash;17 Apr 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.escardio.org/events/congresses/esc-preventive-cardiology/" target="_blank" rel="noopener">ESC Preventive Cardiology</a></h2><p class="desc">The European congress on cardiovascular prevention and cardiometabolic risk.</p></div>
+          <p class="where">Lisbon, Portugal</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">May 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="major">
+          <p class="when">13&ndash;16 May 2027</p>
+          <div class="what"><p class="type">Major congress</p><h2><a href="https://heartrhythm.com/attend" target="_blank" rel="noopener">Heart Rhythm 2027</a></h2><p class="desc">The annual meeting for cardiac electrophysiology and arrhythmia care, including inherited arrhythmia syndromes.</p></div>
+          <p class="where">San Francisco, CA</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">22&ndash;25 May 2027</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://www.escardio.org/events/congresses/heart-failure/" target="_blank" rel="noopener">Heart Failure 2027</a></h2><p class="desc">The European heart failure congress, with strong programming on cardiomyopathies and cardiac amyloidosis.</p></div>
+          <p class="where">London, UK</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">June 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="rel">
+          <p class="when">4&ndash;6 Jun 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.asecho.org/education-events/scientific-sessions/" target="_blank" rel="noopener">ASE Scientific Sessions</a></h2><p class="desc">The annual meeting on cardiovascular ultrasound and echocardiography.</p><span class="flag">Dates to be confirmed</span></div>
+          <p class="where">Tampa, FL</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">7&ndash;10 Jun 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://convention.bio.org/future-dates" target="_blank" rel="noopener">BIO International Convention</a></h2><p class="desc">The biotechnology industry's annual convention, built around partnering meetings.</p></div>
+          <p class="where">Philadelphia, PA</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">12&ndash;15 Jun 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://2027.eshg.org/" target="_blank" rel="noopener">ESHG Conference</a></h2><p class="desc">The annual European conference on human genetics.</p></div>
+          <p class="where">Rotterdam, Netherlands, and online</p>
+        </li>
+        <li class="ev" data-type="spec">
+          <p class="when">17&ndash;20 Jun 2027</p>
+          <div class="what"><p class="type">Specialist meeting</p><h2><a href="https://www.lipid.org/conferences/scientific-sessions/" target="_blank" rel="noopener">NLA Scientific Sessions</a></h2><p class="desc">The annual lipidology meeting, including familial hypercholesterolemia and lipoprotein(a).</p></div>
+          <p class="where">Nashville, TN</p>
+        </li>
+        <li class="ev" data-type="rel">
+          <p class="when">28 Jun&ndash;1 Jul 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.diaglobal.org/en/flagship/dia-2027/about/conference" target="_blank" rel="noopener">DIA Global Annual Meeting</a></h2><p class="desc">The annual meeting on drug development and regulatory science.</p></div>
+          <p class="where">San Diego, CA</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">July 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="rel">
+          <p class="when">30 Jul&ndash;1 Aug 2027</p>
+          <div class="what"><p class="type">Related meeting</p><h2><a href="https://www.aspconline.org/events-center" target="_blank" rel="noopener">ASPC Congress on CVD Prevention</a></h2><p class="desc">The annual congress on cardiovascular disease prevention.</p></div>
+          <p class="where">Austin, TX</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">August 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="major">
+          <p class="when">27&ndash;30 Aug 2027</p>
+          <div class="what"><p class="type">Major congress</p><h2><a href="https://www.escardio.org/events/congresses/esc-congress/" target="_blank" rel="noopener">ESC Congress 2027</a></h2><p class="desc">The European Society of Cardiology's annual congress, one of the largest cardiology meetings in the world.</p></div>
+          <p class="where">Milan, Italy</p>
+        </li>
+      </ul>
+    </section>
+    <section class="grp mon">
+      <span class="lab">November 2027</span>
+      <ul class="evs">
+        <li class="ev" data-type="major">
+          <p class="when">5&ndash;8 Nov 2027</p>
+          <div class="what"><p class="type">Major congress</p><h2><a href="https://exhibitatsessions.org/scientific-sessions/future-meetings/" target="_blank" rel="noopener">AHA Scientific Sessions 2027</a></h2><p class="desc">The American Heart Association's annual meeting, covering cardiovascular science and clinical practice over four days.</p></div>
+          <p class="where">Boston, MA</p>
+        </li>
+      </ul>
+    </section>
+    <p class="none" hidden>No meetings of this type are listed.</p>
+    <p class="note">Dates checked September 2026. Listing a meeting does not imply any affiliation with or endorsement by its organizer.</p>
+  </div>
+</div>
+
+<footer><div class="wrap"><p class="flegal">PrecisionCardio Industry Alliance, Inc. is a nonprofit industry association incorporated in Delaware, seeking recognition as a tax-exempt business league under Section 501(c)(6).</p><div class="frow"><span>PrecisionCardio Industry Alliance, Inc.</span><span><a href="/">Home</a><a href="/about">About</a><a href="/membership">Membership</a><a href="/faq">FAQ</a><a href="/privacy">Privacy</a></span></div></div></footer>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.jump button'),evs=document.querySelectorAll('.ev'),mons=document.querySelectorAll('.mon'),none=document.querySelector('.none');
+  function apply(f){
+    evs.forEach(function(e){e.hidden=!(f==='all'||e.dataset.type===f)});
+    var any=false;
+    mons.forEach(function(m){var vis=m.querySelectorAll('.ev:not([hidden])').length>0;m.hidden=!vis;if(vis)any=true});
+    none.hidden=any;
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});apply(b.dataset.f);
+  })});
+})();
+</script>
+</body>
+</html>
